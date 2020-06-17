@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insurancemanagement.InsuranceSceneController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="544.0" prefWidth="663.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <GridPane prefHeight="542.0" prefWidth="694.0" style="-fx-background-color: #00203fff;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.00001220703126" minWidth="10.0" prefWidth="176.00001220703126" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.33331298828125" minWidth="0.0" prefWidth="41.59998779296876" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.00001220703126" minWidth="10.0" prefWidth="102.39998779296877" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.3333740234375" minWidth="9.399987792968773" prefWidth="9.399987792968773" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="226.0" text="Add Insurance" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="133.0" text="Insurance Num :" textFill="WHITE" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Clients Name :" textFill="WHITE" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="End Date :" textFill="WHITE" GridPane.rowIndex="14" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="122.0" text="Insurance Type :" textFill="WHITE" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Strat Date :" textFill="WHITE" GridPane.rowIndex="12" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="120.0" text="Cover Amount :" textFill="WHITE" GridPane.rowIndex="8" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Pay/Month :" textFill="WHITE" GridPane.rowIndex="10" />
+                  <DatePicker fx:id="iSDate" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="12" />
+                  <DatePicker fx:id="iEDate" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+                  <Button id="toggle" fx:id="addInsuranceBtn" mnemonicParsing="false" onAction="#AddInsurance" prefHeight="25.0" prefWidth="461.0" stylesheets="@DarkBlue.css" text="Add" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="20" />
+                  <TextField fx:id="iNum" prefHeight="25.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="cName" prefHeight="25.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="amount" prefHeight="25.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                  <TextField fx:id="iPayMonth" prefHeight="25.0" prefWidth="82.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+                  <Label fx:id="warnMsg" prefHeight="17.0" prefWidth="572.0" textFill="WHITE" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="inTypeCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Branch Name :" textFill="WHITE" GridPane.rowIndex="16" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Employee Name :" textFill="WHITE" GridPane.rowIndex="18" />
+                  <ComboBox fx:id="branchCombo" onAction="#getEmployee" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="16" />
+                  <ComboBox fx:id="comboEmployee" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="18" />
+               </children>
+            </GridPane>
+            <VBox>
+               <children>
+                  <GridPane style="-fx-background-color: #00203fff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="226.0" text="Insurance  Table" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="insuranceTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#UpdateInsurance" text="Update" />
+                            <MenuItem fx:id="deleteInsuranceBtn" mnemonicParsing="false" onAction="#deleteInsurance" text="Delete" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

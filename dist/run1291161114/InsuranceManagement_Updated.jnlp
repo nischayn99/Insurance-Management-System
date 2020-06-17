@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="InsuranceManagement_Updated.jnlp">
+  <information>
+    <title>InsuranceManagement_Updated</title>
+    <vendor>Sameer</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="InsuranceManagement_Updated.jar" size="2711235" download="eager" />
+    <jar href="lib\controlsfx-8.20.8.jar" size="957666" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.18.jar" size="2330539" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="InsuranceManagement_Updated" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="insurancemanagement.Final"  name="InsuranceManagement_Updated" />
+  <update check="always"/>
+</jnlp>

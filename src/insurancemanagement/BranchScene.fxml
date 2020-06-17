@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="insurancemanagement.BranchSceneController">
+   <children>
+      <SplitPane dividerPositions="0.5767511177347243" layoutX="10.0" layoutY="10.0" prefHeight="841.0" prefWidth="969.0" style="-fx-background-color: #4c4b4b;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <SplitPane dividerPositions="0.5427046263345195" orientation="VERTICAL">
+               <items>
+                  <GridPane prefHeight="564.0" prefWidth="637.0" style="-fx-background-color: #00203fff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.66665649414062" minWidth="10.0" prefWidth="100.66665649414062" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="74.33334350585938" minWidth="10.0" prefWidth="56.333343505859375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.3333740234375" minWidth="10.0" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="122.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="32.66668701171875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="21.33331298828125" minHeight="10.0" prefHeight="19.33331298828125" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="158.0" text="Branch Details" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="355.0" text="Add Employee " textFill="#292727" GridPane.columnSpan="4" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Branch Code :" textFill="WHITE" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="128.0" text="Branch Name :" textFill="WHITE" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="107.0" text="Branch Address :" textFill="WHITE" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Name :" textFill="WHITE" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Contact No :" textFill="WHITE" GridPane.rowIndex="9" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="106.0" text="Address :" textFill="WHITE" GridPane.rowIndex="10" />
+                        <Button id="toggle" fx:id="addEmployeeBtn" alignment="CENTER" mnemonicParsing="false" onAction="#addEmployee" prefHeight="41.0" prefWidth="315.0" stylesheets="@DarkBlue.css" text="Add Employee" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                        <TextField fx:id="branchCode" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                        <TextField fx:id="branchName" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                        <TextField fx:id="branchAdrs" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="employeeName" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                        <TextField fx:id="employeeCntc" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                        <TextArea fx:id="employeeAdrs" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="10" GridPane.rowSpan="2" />
+                        <Label fx:id="warnMsg" prefHeight="26.0" prefWidth="338.0" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <VBox prefHeight="259.0" prefWidth="315.0">
+                     <children>
+                        <TableView fx:id="employeeTable" prefHeight="233.0" prefWidth="315.0" VBox.vgrow="ALWAYS">
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#mDeleteStaff" text="Delete" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.33334350585938" minWidth="10.0" prefWidth="99.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.66668701171875" minWidth="10.0" prefWidth="106.66668701171875" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button id="toggle" fx:id="subBranchBTn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitBranch" prefHeight="12.0" prefWidth="207.0" stylesheets="@DarkBlue.css" text="Submit Branch" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+            <VBox>
+               <children>
+                  <GridPane prefHeight="52.0" prefWidth="332.0" style="-fx-background-color: #00203fff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="158.0" text="Branch Table" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="branchTable" prefHeight="481.0" prefWidth="314.0" VBox.vgrow="ALWAYS">
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#mDeleteBranch" text="Delete Branch" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
